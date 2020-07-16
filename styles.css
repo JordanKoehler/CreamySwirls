@@ -1,3 +1,35 @@
 body {
-  background-color: #FFF5FC  
+  background-color: #FFF5FC
+}
+
+h1 {
+  color: #A71559;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+}
+
+h2 {
+  color: #610932;
+  font-family: 'Mulish', sans-serif;
+}
+
+p {
+  font-family: 'Mulish', sans-serif;
+}
+
+.navbar {
+  font-family: 'Roboto', sans-serif;
+}
+
+.nav-item {
+  padding: 0 18px;
+  font-size: 1.25rem;
+}
+
+.order-btn {
+  background-color: #7AE4DE
+}
+
+.blueSection {
+  background-color: #30C5BC;
 }

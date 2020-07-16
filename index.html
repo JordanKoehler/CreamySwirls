@@ -10,6 +10,7 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/60691397ce.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish&family=Roboto:wght@300;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -17,13 +18,15 @@
 
   <!--- nav bar -->
   <nav class="navbar navbar-expand-lg navbar-light style=" background-color: #fff;">
-    <a class="navbar-brand" href="#">CreamySwirls</a>
+    <a class="navbar-brand" href="#">
+      <img src="Assets/CreamySwirls.png" alt="" loading="lazy">
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
+      <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
@@ -42,25 +45,52 @@
   </nav>
 
   <!-- Title -->
-  <h1>Personalized Tubs of Ice Cream.</h1>
-  <h2>Straight to Your Door.</h2>
-  <p>Create your very own flavour of ice cream made with Canadian Diary. We deliver straight
-    to your door in our custom, recyclable containers so you don't have to worry about it melting
-    on the way.</p>
 
-  <!-- Flavour of the Month -->
+  <div class="row">
+    <div class="col-lg-6">
+      <h1>Personalized Tubs of Ice Cream.</h1>
+      <h2>Straight to Your Door.</h2>
+      <p>Create your very own flavour of ice cream made with Canadian Diary. We deliver straight
+        to your door in our custom, recyclable containers so you don't have to worry about it melting
+        on the way.</p>
+        <button type="button" class="btn btn btn-lg order-btn">Order Now</button>
+      <img class="titleCirlces" src="Assets/titleCircles.png" alt=""></img>
+    </div>
+    <div class="col-lg-6">
+      <img src="Assets/titlePic.png" alt="">
+    </div>
 
-  <section class="blueSection">
-    <h3>Flavour of the Month</h3>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="Flavour">
-          <img src="Assets/matcha.png>" alt="matcha ice cream">
-          <p>matcha</p>
+    <!-- Flavour of the Month -->
+
+    <section class="blueSection">
+      <h3 class="flavourMonth">Flavour of the Month</h3>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="feature-box col-lg-4 flavour">
+            <img src="Assets/matcha.png" alt="matcha ice cream">
+            <p>matcha</p>
+          </div>
+          <div class="feature-box col-lg-4 flavour">
+            <img src="Assets/seasalt.png" alt="matcha ice cream">
+            <p>Chocolate Sea Salt</p>
+          </div>
+          <div class="feature-box col-lg-4 flavour">
+            <img src="Assets/oreo.png" alt="matcha ice cream">
+            <p>Oreo Brownie</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- Next Month Flavour -->
+
+    <section class="footer">
+      <div class="footer">
+        <h3 class="helpFlavour">Help Pick Next Months Flavours</h3>
+
+        <button type="button" class="btn">Submit</button>
+      </div>
+    </section>
 </body>
 
 </html>

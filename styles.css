@@ -6,15 +6,18 @@ h1 {
   color: #A71559;
   font-family: 'Roboto', sans-serif;
   font-weight: 900;
+  padding: 3%;
 }
 
 h2 {
   color: #610932;
   font-family: 'Mulish', sans-serif;
+  padding: 2%;
 }
 
 p {
   font-family: 'Mulish', sans-serif;
+  line-height: 250%;
 }
 
 .navbar {
@@ -26,10 +29,40 @@ p {
   font-size: 1.25rem;
 }
 
+.titleImage {
+  position: relative;
+  padding: 8% 5% 7%;
+}
+
+.titleText{
+  position: absolute;
+}
+
+.titleCirlces {
+  margin: auto;
+}
+
 .order-btn {
-  background-color: #7AE4DE
+  background-color: #7AE4DE;
+  color: #fff;
+  text-shadow: 0 3px 3px #000;
 }
 
 .blueSection {
   background-color: #30C5BC;
+}
+
+.flavourMonth{
+  text-align: center;
+  padding: 5% 5% 3% 5%;
+}
+
+.flavour {
+  padding: 0 5% 5% 5%;
+  text-align: center;
+}
+
+.footer {
+  text-align: center;
+  padding: 5%
 }

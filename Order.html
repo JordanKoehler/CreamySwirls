@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Creamy Swirls</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800;900&family=Ubuntu&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/60691397ce.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish&family=Roboto:wght@300;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!--- nav bar -->
+  <nav class="navbar navbar-expand-lg navbar-light style=" background-color: #fff;>
+    <a class="navbar-brand" href="#">
+      <img src="Assets/CreamySwirls.png" alt="" loading="lazy">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="order.html">Order <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">FAQ <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Profile <span class="sr-only">(current)</span></a>
+        </li>
+  </nav>
+<div class="row">
+  <div class="col-lg-6">
+
+    <h3>Create Your Ice Cream</h3>
+
+    <!-- form -->
+    <form>
+      <!-- Tub Size -->
+      <h4>Tub Size</h4>
+      <div class="container">
+        <form role="form">
+          <div class="checkbox text-left">
+            <label class="form-checkbox form-icon" for="s_fac">
+              <input id="s_fac" type="checkbox" class="sev_check"> 14oz - $19.99
+            </label>
+          </div>
+          <div class="checkbox text-left">
+            <label class="form-checkbox form-icon" for="s_fac1">
+              <input id="s_fac1" type="checkbox" class="sev_check"> 16oz - $26.99
+            </label>
+          </div>
+          <div class="checkbox text-left">
+            <label class="form-checkbox form-icon" for="s_fac2">
+              <input id="s_fac2" type="checkbox" class="sev_check"> 24oz - $29.99
+            </label>
+          </div>
+        </form>
+      </div>
+
+      <!-- Flavours -->
+      <h4>Tub Size</h4>
+      <h5>Select 1-2 Flavours</h5>
+      <div class="container">
+        <div class="row">
+          <div class="col col-lg-3">
+            <input type="checkbox">Chocolate
+          </div>
+          <div class="col col-lg-3">
+            <input type="checkbox">Vanilla
+          </div>
+          <div class="col col-lg-3">
+            <input type="checkbox">Strawberry
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-lg-3">
+            <input type="checkbox">Coconut
+          </div>
+          <div class="col col-lg-3">
+            <input type="checkbox">Lime
+          </div>
+          <div class="col col-lg-3">
+            <input type="checkbox">Cookies 'n' Cream
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-lg-3">
+            <input type="checkbox">Marshmellow
+          </div>
+          <div class="col col-lg-3">
+            <input type="checkbox">Orange
+          </div>
+          <div class="col col-lg-3">
+            <input type="checkbox">Banana
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-lg-3">
+            <input type="checkbox">Raspberry
+          </div>
+          <div class="col col-lg-3">
+            <input type="checkbox">Dark Chocolate
+          </div>
+          <div class="col col-lg-3">
+            <input type="checkbox">Caramel
+          </div>
+        </div>
+      </div>
+
+      <!-- Flavour of Month -->
+      <h5>Flavours of the Month</h5>
+      <div class="container">
+        <div class="row">
+          <div class="col col-lg-3">
+            <input type="checkbox">Matcha
+          </div>
+          <div class="col col-lg-3">
+            <input type="checkbox">Sea Salt Choco
+          </div>
+          <div class="col col-lg-3">
+            <input type="checkbox">Oreo Brownie
+          </div>
+        </div>
+      </div>
+
+      <!-- Additions -->
+      <h4>Additions</h4>
+      <div class="container">
+        <div class="row">
+          <div class="col col-lg-3">
+            <input type="checkbox">Choco Chips
+          </div>
+          <div class="col col-lg-3">
+            <input type="checkbox">Banana Chips
+          </div>
+          <div class="col col-lg-3">
+            <input type="checkbox">PB Cups
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-lg-3">
+            <input type="checkbox">Strawberries
+          </div>
+          <div class="col col-lg-3">
+            <input type="checkbox">Gummy Bears
+          </div>
+          <div class="col col-lg-3">
+            <input type="checkbox">Gummy Worms
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-lg-3">
+            <input type="checkbox">Popping Boba
+          </div>
+          <div class="col col-lg-3">
+            <input type="checkbox">M&M's
+          </div>
+          <div class="col col-lg-3">
+            <input type="checkbox">Skor
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-lg-3">
+            <input type="checkbox">Oreo Chunks
+          </div>
+          <div class="col col-lg-3">
+            <input type="checkbox">Fuzzy Peaches
+          </div>
+          <div class="col col-lg-3">
+            <input type="checkbox">Coconut Shavings
+          </div>
+        </div>
+      </div>
+
+      <!-- Confirm -->
+      <div class="text-center">
+        <button type="button" class="btn btn btn-lg submit-btn">Confirm Order</button>
+      </div>
+    </div>
+  </form>
+  <div class="col-lg-6">
+    <img class="titlePic" src="Assets/titlePic.png" alt="">
+  </div>
+  </div>
+  </div>
+</body>
+
+</html>

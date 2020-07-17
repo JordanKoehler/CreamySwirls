@@ -1,5 +1,5 @@
 body {
-  background-color: #FFF5FC
+  background-color: #FFF5FC;
 }
 
 h1 {
@@ -20,6 +20,8 @@ p {
   line-height: 250%;
 }
 
+/* navbar */
+
 .navbar {
   font-family: 'Roboto', sans-serif;
 }
@@ -28,6 +30,8 @@ p {
   padding: 0 18px;
   font-size: 1.25rem;
 }
+
+/* title */
 
 .titleImage {
   position: relative;
@@ -40,6 +44,7 @@ p {
 
 .titlePic {
   height: 1037px;
+  position: absolute;
 }
 
 .titleCirlces {
@@ -59,30 +64,35 @@ p {
   border-radius: 12px;
 }
 
+/* Current Flavours */
+
 .blueSection {
   background-color: #30C5BC;
+  text-align: center;
+  position: relative;
 }
 
 .flavourMonth{
-  text-align: center;
   padding: 5% 5% 3% 5%;
+
 }
 
 .flavour {
-  text-align: center;
   padding-bottom: 3%;
   font-size: 1.5rem;
   padding-left: 0;
   padding-right: 0;
 }
 
+/* Submit Flavour */
+
 .footer {
-  text-align: center;
   padding: 5%
 }
 
 .helpFlavour{
   padding: 2%;
+  text-align: center;
 }
 
 .submit-btn {
@@ -93,3 +103,5 @@ p {
   padding: 1.5% 8%;
   border-radius: 12px;
 }
+
+/* Order Form */

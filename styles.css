@@ -52,7 +52,7 @@ p {
 }
 
 .text-center {
-  padding: 7%;
+  padding: 3%;
 }
 
 .order-btn {
@@ -62,6 +62,11 @@ p {
   font-size: 2em;
   padding: 4% 15%;
   border-radius: 12px;
+}
+
+.order-btn:hover {
+  background-color: #30C5BC;
+  color: #fff;
 }
 
 /* Current Flavours */
@@ -87,7 +92,7 @@ p {
 /* Submit Flavour */
 
 .footer {
-  padding: 5%
+  padding: 3%;
 }
 
 .helpFlavour{
@@ -104,6 +109,11 @@ p {
   border-radius: 12px;
 }
 
+.submit-btn:hover {
+  background-color: #A71559;
+  color: #fff;
+}
+
 /* Order Form */
 
 .sidePic {
@@ -114,10 +124,17 @@ p {
   background-color: #30C5BC;
   border-radius: 12px;
   padding: 5%;
-  width: 100%;
-  margin: 2.5% 5%;
+  float: left;
+  margin: 7%;
 }
 
 .faqText {
   padding: 2%;
+}
+
+/* About */
+
+.aboutImg {
+  height: 50%;
+  width: 50%;
 }

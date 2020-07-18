@@ -24,6 +24,7 @@ p {
 
 .navbar {
   font-family: 'Roboto', sans-serif;
+  background-color: #fff;
 }
 
 .nav-item {
@@ -112,6 +113,12 @@ p {
 .submit-btn:hover {
   background-color: #A71559;
   color: #fff;
+}
+
+.col-centered{
+    margin: 0 auto;
+    float: none;
+    text-align:center;
 }
 
 /* Order Form */

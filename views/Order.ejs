@@ -4,13 +4,10 @@
   <div class="col-lg-6">
 
     <h3>Create Your Ice Cream</h3>
-
-    <!-- form -->
-    <form>
       <!-- Tub Size -->
       <h4>Tub Size</h4>
       <div class="container">
-        <form role="form">
+        <form class="orderForm">
           <div class="checkbox text-left">
             <label class="form-checkbox form-icon" for="s_fac">
               <input id="s_fac" type="checkbox" class="sev_check"> 14oz - $19.99
@@ -30,68 +27,70 @@
       </div>
 
       <!-- Flavours -->
-      <h4>Tub Size</h4>
+      <h4>Flavours</h4>
       <h5>Select 1-2 Flavours</h5>
-      <form>
+      <form class="orderForm">
       <div class="container">
         <div class="row">
-          <div class="col col-lg-3">
+          <div class="checkbox col col-lg">
             <input type="checkbox">Chocolate
           </div>
-          <div class="col col-lg-3">
+          <div class="checkbox col col-lg">
             <input type="checkbox">Vanilla
           </div>
-          <div class="col col-lg-3">
+          <div class="checkbox col col-lg">
             <input type="checkbox">Strawberry
           </div>
         </div>
         <div class="row">
-          <div class="col col-lg-3">
+          <div class="checkbox col col-lg">
             <input type="checkbox">Coconut
           </div>
-          <div class="col col-lg-3">
+          <div class="checkbox col col-lg">
             <input type="checkbox">Lime
           </div>
-          <div class="col col-lg-3">
+          <div class="checkbox col col-lg">
             <input type="checkbox">Cookies 'n' Cream
           </div>
         </div>
         <div class="row">
-          <div class="col col-lg-3">
+          <div class="checkbox col col-lg">
             <input type="checkbox">Marshmellow
           </div>
-          <div class="col col-lg-3">
+          <div class="checkbox col col-lg">
             <input type="checkbox">Orange
           </div>
-          <div class="col col-lg-3">
+          <div class="checkbox col col-lg">
             <input type="checkbox">Banana
           </div>
         </div>
         <div class="row">
-          <div class="col col-lg-3">
+          <div class="checkbox col col-lg">
             <input type="checkbox">Raspberry
           </div>
-          <div class="col col-lg-3">
+          <div class="checkbox col col-lg">
             <input type="checkbox">Dark Chocolate
           </div>
-          <div class="col col-lg-3">
+          <div class="checkbox col col-lg">
             <input type="checkbox">Caramel
           </div>
         </div>
       </div>
+      </form>
 
 
       <!-- Flavour of Month -->
       <h5>Flavours of the Month</h5>
+      <form class="orderForm">
       <div class="container">
         <div class="row">
-          <div class="col col-lg-3">
+          <div class="checkbox col col-lg">
             <input type="checkbox">Matcha
           </div>
-          <div class="col col-lg-3">
+          <div class="checkbox col col-lg">
             <input type="checkbox">Sea Salt Choco
           </div>
-          <div class="col col-lg-3">
+          <div class="checkbox col col-lg">
             <input type="checkbox">Oreo Brownie
           </div>
         </div>
@@ -100,49 +99,49 @@
 
       <!-- Additions -->
       <h4>Additions</h4>
-      <form>
+      <form class="orderForm">
       <div class="container">
         <div class="row">
-          <div class="col col-lg-3">
+          <div class="checkbox col col-lg">
             <input type="checkbox">Choco Chips
           </div>
-          <div class="col col-lg-3">
+          <div class="checkbox col col-lg">
             <input type="checkbox">Banana Chips
           </div>
-          <div class="col col-lg-3">
+          <div class="checkbox col col-lg">
             <input type="checkbox">PB Cups
           </div>
         </div>
         <div class="row">
-          <div class="col col-lg-3">
+          <div class="checkbox col col-lg">
             <input type="checkbox">Strawberries
           </div>
-          <div class="col col-lg-3">
+          <div class="checkbox col col-lg">
             <input type="checkbox">Gummy Bears
           </div>
-          <div class="col col-lg-3">
+          <div class="checkbox col col-lg">
             <input type="checkbox">Gummy Worms
           </div>
         </div>
         <div class="row">
-          <div class="col col-lg-3">
+          <div class="checkbox col col-lg">
             <input type="checkbox">Popping Boba
           </div>
-          <div class="col col-lg-3">
+          <div class="checkbox col col-lg">
             <input type="checkbox">M&M's
           </div>
-          <div class="col col-lg-3">
+          <div class="checkbox col col-lg">
             <input type="checkbox">Skor
           </div>
         </div>
         <div class="row">
-          <div class="col col-lg-3">
+          <div class="checkbox col col-lg">
             <input type="checkbox">Oreo Chunks
           </div>
-          <div class="col col-lg-3">
+          <div class="checkbox col col-lg">
             <input type="checkbox">Fuzzy Peaches
           </div>
-          <div class="col col-lg-3">
+          <div class="checkbox col col-lg">
             <input type="checkbox">Coconut Shavings
           </div>
         </div>
@@ -155,11 +154,13 @@
       </div>
     </div>
 
+
   <div class="col-lg-6 ">
-    <img class="sidePic" src="orderImage.png" alt="">
+    <img class="sidePic float-right" src="orderImage.png" alt="">
   </div>
   </div>
   </div>
+  <%- include("partials/footer") -%>
 </body>
 
 </html>

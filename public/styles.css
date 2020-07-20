@@ -1,5 +1,7 @@
 body {
   background-color: #FFF5FC;
+  display: flex;
+ flex-direction: column;
 }
 
 h1 {
@@ -13,6 +15,18 @@ h2 {
   color: #610932;
   font-family: 'Mulish', sans-serif;
   padding: 2%;
+}
+
+h3 {
+  padding: 5% 0 0 10%;
+}
+h4 {
+  padding-left: 15%;
+  padding-top: 2%
+}
+
+h5 {
+  padding-left: 15%;
 }
 
 p {
@@ -106,6 +120,7 @@ p {
   color: #fff;
   font-size: 2rem;
   text-shadow: 0 3px 5px #000;
+  margin-top: 3%;
   padding: 1.5% 8%;
   border-radius: 12px;
 }
@@ -124,15 +139,29 @@ p {
 /* Order Form */
 
 .sidePic {
-  text-align: right;
+  align-content: right;
 }
+
+.orderForm{
+  padding-left: 20%;
+}
+
+.orderFlavourMonth{
+padding-left: 0;
+}
+
+.checkbox {
+  padding: 2%;
+}
+
+/* FAQ */
 
 .FAQ {
   background-color: #30C5BC;
   border-radius: 12px;
-  padding: 5%;
+  padding: 2% 5%;
   float: left;
-  margin: 7%;
+  margin: 1% 7%;
 }
 
 .faqText {
@@ -144,4 +173,12 @@ p {
 .aboutImg {
   height: 50%;
   width: 50%;
+}
+
+/* Footer */
+.footer {
+ padding: 2% 0 0 0;
+ text-align: center;
+ top: 100px;
+ position: relative;
 }

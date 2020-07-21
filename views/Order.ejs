@@ -1,106 +1,108 @@
 <%- include("partials/header") -%>
 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
 <div class="row">
   <div class="col-lg-6">
 
     <h3>Create Your Ice Cream</h3>
       <!-- Tub Size -->
       <h4>Tub Size</h4>
-      <div class="container">
-        <form class="orderForm">
+
+        <form method="post">
+          <div class="container tubSize orderForm">
           <div class="checkbox text-left">
             <label class="form-checkbox form-icon" for="s_fac">
-              <input id="s_fac" type="checkbox" class="sev_check"> 14oz - $19.99
+              <input id="s_fac" type="radio" class="sev_check"> 14oz - $19.99
             </label>
           </div>
           <div class="checkbox text-left">
             <label class="form-checkbox form-icon" for="s_fac1">
-              <input id="s_fac1" type="checkbox" class="sev_check"> 16oz - $26.99
+              <input id="s_fac1" type="radio" class="sev_check"> 16oz - $26.99
             </label>
           </div>
           <div class="checkbox text-left">
             <label class="form-checkbox form-icon" for="s_fac2">
-              <input id="s_fac2" type="checkbox" class="sev_check"> 24oz - $29.99
+              <input id="s_fac2" type="radio" class="sev_check"> 24oz - $29.99
             </label>
           </div>
-        </form>
+
       </div>
 
       <!-- Flavours -->
       <h4>Flavours</h4>
       <h5>Select 1-2 Flavours</h5>
-      <form class="orderForm">
-      <div class="container">
+
+      <div class="container flavours orderForm">
         <div class="row">
-          <div class="checkbox col col-lg">
+          <div class="checkbox col col-lg" name=flavoursCheckbox">
             <input type="checkbox">Chocolate
           </div>
-          <div class="checkbox col col-lg">
+          <div class="checkbox col col-lg" name=flavoursCheckbox">
             <input type="checkbox">Vanilla
           </div>
-          <div class="checkbox col col-lg">
+          <div class="checkbox col col-lg" name=flavoursCheckbox">
             <input type="checkbox">Strawberry
           </div>
         </div>
         <div class="row">
-          <div class="checkbox col col-lg">
+          <div class="checkbox col col-lg" name=flavoursCheckbox">
             <input type="checkbox">Coconut
           </div>
-          <div class="checkbox col col-lg">
+          <div class="checkbox col col-lg" name=flavoursCheckbox">
             <input type="checkbox">Lime
           </div>
-          <div class="checkbox col col-lg">
+          <div class="checkbox col col-lg" name=flavoursCheckbox">
             <input type="checkbox">Cookies 'n' Cream
           </div>
         </div>
         <div class="row">
-          <div class="checkbox col col-lg">
+          <div class="checkbox col col-lg" name=flavoursCheckbox">
             <input type="checkbox">Marshmellow
           </div>
-          <div class="checkbox col col-lg">
+          <div class="checkbox col col-lg" name=flavoursCheckbox">
             <input type="checkbox">Orange
           </div>
-          <div class="checkbox col col-lg">
+          <div class="checkbox col col-lg" name=flavoursCheckbox">
             <input type="checkbox">Banana
           </div>
         </div>
         <div class="row">
-          <div class="checkbox col col-lg">
+          <div class="checkbox col col-lg" name=flavoursCheckbox">
             <input type="checkbox">Raspberry
           </div>
-          <div class="checkbox col col-lg">
+          <div class="checkbox col col-lg" name=flavoursCheckbox">
             <input type="checkbox">Dark Chocolate
           </div>
-          <div class="checkbox col col-lg">
+          <div class="checkbox col col-lg" name=flavoursCheckbox">
             <input type="checkbox">Caramel
           </div>
         </div>
       </div>
-      </form>
+
 
 
       <!-- Flavour of Month -->
       <h5>Flavours of the Month</h5>
-      <form class="orderForm">
-      <div class="container">
+
+      <div class="container orderForm">
         <div class="row">
-          <div class="checkbox col col-lg">
+          <div class="checkbox col col-lg" name=flavoursCheckbox">
             <input type="checkbox">Matcha
           </div>
-          <div class="checkbox col col-lg">
+          <div class="checkbox col col-lg" name=flavoursCheckbox">
             <input type="checkbox">Sea Salt Choco
           </div>
-          <div class="checkbox col col-lg">
+          <div class="checkbox col col-lg" name=flavoursCheckbox">
             <input type="checkbox">Oreo Brownie
           </div>
         </div>
       </div>
-      </form>
+
 
       <!-- Additions -->
       <h4>Additions</h4>
-      <form class="orderForm">
-      <div class="container">
+      <div class="container additions orderForm">
         <div class="row">
           <div class="checkbox col col-lg">
             <input type="checkbox">Choco Chips
@@ -146,13 +148,14 @@
           </div>
         </div>
       </div>
-      </form>
+
 
       <!-- Confirm -->
       <div class="text-center">
-        <button type="button" class="btn btn btn-lg submit-btn">Confirm Order</button>
+        <button type="submit" class="btn btn btn-lg submit-btn">Confirm Order</button>
       </div>
     </div>
+    </form>
 
 
   <div class="col-lg-6 ">
@@ -160,7 +163,17 @@
   </div>
   </div>
   </div>
-  <%- include("partials/footer") -%>
-</body>
 
-</html>
+<script type="text/javascript">
+  $('input[type=checkbox]').on('change', function (e) {
+    if ($('input[type=checkbox]:checked').length > 2) {
+        $(this).prop('checked', false);
+        alert("you can only select 2 flavours");
+    }
+});
+
+
+</script>
+
+
+  <%- include("partials/footer") -%>

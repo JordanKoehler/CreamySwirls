@@ -2,30 +2,36 @@
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 
+<% const currentFlavours = ["Chocolate", "Vanilla", "Strawberry", "Coconut", "Lime", "Cookies n Cream", "Marshmellow",
+"Orange", "Banana", "Raspberry", "Dark Chocolate", "Caramel"]; %>
+<% const currentFlavourMonth = ["Matcha", "Sea Salt Choco", "Oreo Brownie"]; %>
+<% const currentAdditions = ["Choco Chips", "Banana Chips", "PB Cups", "Popping Boba", "Strawberries", "Gummy Bears",
+"Gummy Worms", "M&Ms", "Oreo Chunks", "Fuzzy Peaches", "Coconut Shavings", "Skor"]; %>
+
 <div class="row">
   <div class="col-lg-6">
 
     <h3>Create Your Ice Cream</h3>
-      <!-- Tub Size -->
-      <h4>Tub Size</h4>
+    <!-- Tub Size -->
+    <h4>Tub Size</h4>
 
-        <form method="post">
-          <div class="container tubSize orderForm">
-          <div class="checkbox text-left">
-            <label class="form-checkbox form-icon" for="s_fac">
-              <input id="s_fac" type="radio" class="sev_check"> 14oz - $19.99
-            </label>
-          </div>
-          <div class="checkbox text-left">
-            <label class="form-checkbox form-icon" for="s_fac1">
-              <input id="s_fac1" type="radio" class="sev_check"> 16oz - $26.99
-            </label>
-          </div>
-          <div class="checkbox text-left">
-            <label class="form-checkbox form-icon" for="s_fac2">
-              <input id="s_fac2" type="radio" class="sev_check"> 24oz - $29.99
-            </label>
-          </div>
+    <form method="post">
+      <div class="container tubSize orderForm">
+        <div class="checkbox text-left">
+          <label class="form-checkbox form-icon" for="s_fac">
+            <input id="s_fac" type="radio" class="sev_check"> 14oz - $19.99
+          </label>
+        </div>
+        <div class="checkbox text-left">
+          <label class="form-checkbox form-icon" for="s_fac1">
+            <input id="s_fac1" type="radio" class="sev_check"> 16oz - $26.99
+          </label>
+        </div>
+        <div class="checkbox text-left">
+          <label class="form-checkbox form-icon" for="s_fac2">
+            <input id="s_fac2" type="radio" class="sev_check"> 24oz - $29.99
+          </label>
+        </div>
 
       </div>
 
@@ -33,147 +39,63 @@
       <h4>Flavours</h4>
       <h5>Select 1-2 Flavours</h5>
 
-      <div class="container flavours orderForm">
-        <div class="row">
-          <div class="checkbox col col-lg" name=flavoursCheckbox">
-            <input type="checkbox">Chocolate
-          </div>
-          <div class="checkbox col col-lg" name=flavoursCheckbox">
-            <input type="checkbox">Vanilla
-          </div>
-          <div class="checkbox col col-lg" name=flavoursCheckbox">
-            <input type="checkbox">Strawberry
-          </div>
-        </div>
-        <div class="row">
-          <div class="checkbox col col-lg" name=flavoursCheckbox">
-            <input type="checkbox">Coconut
-          </div>
-          <div class="checkbox col col-lg" name=flavoursCheckbox">
-            <input type="checkbox">Lime
-          </div>
-          <div class="checkbox col col-lg" name=flavoursCheckbox">
-            <input type="checkbox">Cookies 'n' Cream
-          </div>
-        </div>
-        <div class="row">
-          <div class="checkbox col col-lg" name=flavoursCheckbox">
-            <input type="checkbox">Marshmellow
-          </div>
-          <div class="checkbox col col-lg" name=flavoursCheckbox">
-            <input type="checkbox">Orange
-          </div>
-          <div class="checkbox col col-lg" name=flavoursCheckbox">
-            <input type="checkbox">Banana
-          </div>
-        </div>
-        <div class="row">
-          <div class="checkbox col col-lg" name=flavoursCheckbox">
-            <input type="checkbox">Raspberry
-          </div>
-          <div class="checkbox col col-lg" name=flavoursCheckbox">
-            <input type="checkbox">Dark Chocolate
-          </div>
-          <div class="checkbox col col-lg" name=flavoursCheckbox">
-            <input type="checkbox">Caramel
-          </div>
-        </div>
-      </div>
-
-
-
-      <!-- Flavour of Month -->
-      <h5>Flavours of the Month</h5>
-
       <div class="container orderForm">
         <div class="row">
-          <div class="checkbox col col-lg" name=flavoursCheckbox">
-            <input type="checkbox">Matcha
+          <%  for(let i = 0; i < currentFlavours.length; i++){ %>
+          <div class="checkbox col-lg-4" name=flavoursCheckbox">
+            <input type="checkbox"> <%=currentFlavours[i];%>
           </div>
-          <div class="checkbox col col-lg" name=flavoursCheckbox">
-            <input type="checkbox">Sea Salt Choco
-          </div>
-          <div class="checkbox col col-lg" name=flavoursCheckbox">
-            <input type="checkbox">Oreo Brownie
-          </div>
+          <% ;} %>
         </div>
       </div>
 
 
-      <!-- Additions -->
-      <h4>Additions</h4>
-      <div class="container additions orderForm">
-        <div class="row">
-          <div class="checkbox col col-lg">
-            <input type="checkbox">Choco Chips
-          </div>
-          <div class="checkbox col col-lg">
-            <input type="checkbox">Banana Chips
-          </div>
-          <div class="checkbox col col-lg">
-            <input type="checkbox">PB Cups
-          </div>
-        </div>
-        <div class="row">
-          <div class="checkbox col col-lg">
-            <input type="checkbox">Strawberries
-          </div>
-          <div class="checkbox col col-lg">
-            <input type="checkbox">Gummy Bears
-          </div>
-          <div class="checkbox col col-lg">
-            <input type="checkbox">Gummy Worms
-          </div>
-        </div>
-        <div class="row">
-          <div class="checkbox col col-lg">
-            <input type="checkbox">Popping Boba
-          </div>
-          <div class="checkbox col col-lg">
-            <input type="checkbox">M&M's
-          </div>
-          <div class="checkbox col col-lg">
-            <input type="checkbox">Skor
-          </div>
-        </div>
-        <div class="row">
-          <div class="checkbox col col-lg">
-            <input type="checkbox">Oreo Chunks
-          </div>
-          <div class="checkbox col col-lg">
-            <input type="checkbox">Fuzzy Peaches
-          </div>
-          <div class="checkbox col col-lg">
-            <input type="checkbox">Coconut Shavings
-          </div>
-        </div>
-      </div>
+  <!-- Flavour of Month -->
+  <h5>Flavours of the Month</h5>
 
-
-      <!-- Confirm -->
-      <div class="text-center">
-        <button type="submit" class="btn btn btn-lg submit-btn">Confirm Order</button>
+  <div class="container orderForm">
+    <div class="row">
+      <%  for(let i = 0; i < currentFlavourMonth.length; i++){ %>
+      <div class="checkbox col-lg-4" name=flavoursCheckbox">
+        <input type="checkbox"> <%=currentFlavourMonth[i];%>
       </div>
+      <% ;} %>
     </div>
-    </form>
+  </div>
 
 
-  <div class="col-lg-6 ">
-    <img class="sidePic float-right" src="orderImage.png" alt="">
+  <!-- Additions -->
+  <h4>Additions</h4>
+  <div class="container orderForm">
+    <div class="row">
+      <%  for(let i = 0; i < currentAdditions.length; i++){ %>
+      <div class="checkbox col-lg-4" name=flavoursCheckbox">
+        <input type="checkbox"> <%=currentAdditions[i];%>
+      </div>
+      <% ;} %>
+    </div>
   </div>
+</form>
+
+  <!-- Confirm Button -->
+  <div class="text-center">
+    <a href="yourOrder" class="btn submit-btn btn-lg" role="button">Confirm</a>
   </div>
-  </div>
+</div>
+
+<div class="col-lg-6 ">
+  <img class="sidePic float-right" src="orderImage.png" alt="">
+</div>
+</div>
 
 <script type="text/javascript">
-  $('input[type=checkbox]').on('change', function (e) {
+  $('input[type=checkbox]').on('change', function(e) {
     if ($('input[type=checkbox]:checked').length > 2) {
-        $(this).prop('checked', false);
-        alert("you can only select 2 flavours");
+      $(this).prop('checked', false);
+      alert("you can only select 2 flavours");
     }
-});
-
-
+  });
 </script>
 
 
-  <%- include("partials/footer") -%>
+<%- include("partials/footer") -%>

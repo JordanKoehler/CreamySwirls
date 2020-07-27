@@ -34,6 +34,9 @@ p {
   line-height: 250%;
 }
 
+ol {
+  padding-bottom: 5%;
+}
 /* navbar */
 
 .navbar {

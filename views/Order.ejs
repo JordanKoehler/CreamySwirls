@@ -16,85 +16,95 @@
     <h4>Tub Size</h4>
 
     <form method="post">
-      <div class="container tubSize orderForm">
-        <div class="checkbox text-left">
-          <label class="form-checkbox form-icon" for="s_fac">
-            <input id="s_fac" type="radio" class="sev_check"> 14oz - $19.99
-          </label>
-        </div>
-        <div class="checkbox text-left">
-          <label class="form-checkbox form-icon" for="s_fac1">
-            <input id="s_fac1" type="radio" class="sev_check"> 16oz - $26.99
-          </label>
-        </div>
-        <div class="checkbox text-left">
-          <label class="form-checkbox form-icon" for="s_fac2">
-            <input id="s_fac2" type="radio" class="sev_check"> 24oz - $29.99
-          </label>
-        </div>
-
+      <div class="container tubSize orderForm text-left">
+        <ul class="list-group">
+          <ol><input type="radio" name="tubSizeForm" value="14oz"> 14oz - $19.99</ol>
+          <ol>
+            <input type="radio" name="tubSizeForm" value="16oz"> 16oz - $26.99
+          </ol>
+          <ol>
+            <input type="radio" name="tubSizeForm" value="24oz"> 24oz - $29.99
+          </ol>
+        </ul>
       </div>
 
       <!-- Flavours -->
       <h4>Flavours</h4>
       <h5>Select 1-2 Flavours</h5>
-
-      <div class="container orderForm">
-        <div class="row">
-          <%  for(let i = 0; i < currentFlavours.length; i++){ %>
-          <div class="checkbox col-lg-4" name=flavoursCheckbox">
-            <input type="checkbox"> <%=currentFlavours[i];%>
+      <div class="flavourForm">
+        <div class="container orderForm">
+          <div class="row">
+            <%  for(let i = 0; i < currentFlavours.length; i++){ %>
+            <div class="checkbox col-lg-4" >
+              <input type="checkbox" name="flavoursCheckbox"> <%=currentFlavours[i];%>
+            </div>
+            <% ;} %>
           </div>
-          <% ;} %>
+        </div>
+
+
+        <!-- Flavour of Month -->
+        <h5>Flavours of the Month</h5>
+
+        <div class="container orderForm">
+          <div class="row">
+            <%  for(let i = 0; i < currentFlavourMonth.length; i++){ %>
+            <div class="checkbox col-lg-4" >
+              <input type="checkbox" name="flavoursCheckbox"> <%=currentFlavourMonth[i];%>
+            </div>
+            <% ;} %>
+          </div>
         </div>
       </div>
 
 
-  <!-- Flavour of Month -->
-  <h5>Flavours of the Month</h5>
-
-  <div class="container orderForm">
-    <div class="row">
-      <%  for(let i = 0; i < currentFlavourMonth.length; i++){ %>
-      <div class="checkbox col-lg-4" name=flavoursCheckbox">
-        <input type="checkbox"> <%=currentFlavourMonth[i];%>
+      <!-- Additions -->
+      <h4>Additions</h4>
+      <div class="container orderForm additionForm">
+        <div class="row">
+          <%  for(let i = 0; i < currentAdditions.length; i++){ %>
+          <div class="checkbox col-lg-4">
+            <input type="checkbox" name="additionsCheckbox"> <%=currentAdditions[i];%>
+          </div>
+          <% ;} %>
+        </div>
       </div>
-      <% ;} %>
+    </form>
+
+    <!-- Confirm Button -->
+    <div class="text-center">
+      <a href="yourOrder" class="btn submit-btn btn-lg" role="button">Confirm</a>
     </div>
   </div>
 
-
-  <!-- Additions -->
-  <h4>Additions</h4>
-  <div class="container orderForm">
-    <div class="row">
-      <%  for(let i = 0; i < currentAdditions.length; i++){ %>
-      <div class="checkbox col-lg-4" name=flavoursCheckbox">
-        <input type="checkbox"> <%=currentAdditions[i];%>
-      </div>
-      <% ;} %>
-    </div>
+  <div class="col-lg-6 ">
+    <img class="sidePic float-right" src="orderImage.png" alt="">
   </div>
-</form>
-
-  <!-- Confirm Button -->
-  <div class="text-center">
-    <a href="yourOrder" class="btn submit-btn btn-lg" role="button">Confirm</a>
-  </div>
-</div>
-
-<div class="col-lg-6 ">
-  <img class="sidePic float-right" src="orderImage.png" alt="">
-</div>
 </div>
 
 <script type="text/javascript">
-  $('input[type=checkbox]').on('change', function(e) {
-    if ($('input[type=checkbox]:checked').length > 2) {
-      $(this).prop('checked', false);
-      alert("you can only select 2 flavours");
-    }
-  });
+  // $('input[type=checkbox][name=flavoursCheckbox]').on('change', function(e) {
+  //   if ($('input[type=checkbox][name=flavoursCheckbox]:checked').length > 2) {
+  //     $(this).prop('checked', false);
+  //     alert("you can only select 2 flavours");
+  //   }
+  // });
+
+  function setupCheckboxGroup(grpName){
+
+$('input[type=checkbox][name='+grpName+']').on('change', function(e) {
+  if ($('input[type=checkbox][name='+grpName+']:checked').length < 2) {
+    $('input[type=checkbox][name='+grpName+']:not(:checked)').prop('disabled', false);
+  }
+  if ($('input[type=checkbox][name='+grpName+']:checked').length == 2) {
+    $('input[type=checkbox][name='+grpName+']:not(:checked)').prop('disabled', 'disabled');
+  }
+});
+
+}
+
+setupCheckboxGroup('flavoursCheckbox');
+setupCheckboxGroup('additionsCheckbox');
 </script>
 
 
